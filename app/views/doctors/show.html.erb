@@ -1,0 +1,18 @@
+<h2> Doctor </h2>
+
+<p>
+    <ul>
+        <% @doctor.appointments.each do |app| %>
+            <li><%= app.datetime %></li>
+        <% end %>
+    </ul>
+</p>
+<br>
+<p>
+    <ul>
+        <% @doctor.patients.each do |patient| %>
+            <li><%= link_to "#{patient.name}", patient %></li>
+        <% end %>
+    </ul>
+</p>
+
