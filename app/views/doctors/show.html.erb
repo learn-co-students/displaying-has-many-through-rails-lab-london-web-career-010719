@@ -1,0 +1,5 @@
+<h2><%=@doctor.name %></h2>
+<h3>Patients: <%= @doctor.patients.map{|patient| patient.name}.join(", ") %></h3>
+
+
+<h3><a href="/appointments">Go To All Appointments</a></h3>

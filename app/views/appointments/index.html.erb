@@ -1,0 +1,17 @@
+<h3><a href="/appointments/new">Create New Appointment</a></h3>
+
+<br>
+
+
+<h3>All Appointments</h3>
+<% $num = 0 %>
+<% @appointments.all.map do |appointment| %>
+<h3><%= "#{$num + 1}"%>. <%= appointment.name %></h3>
+Patient Name: <%= link_to appointment.patient.name, patient_path(appointment.patient)%>
+<br>
+Doctor Name: <%= link_to appointment.doctor.name, doctor_path(appointment.doctor) %>
+<br>
+<br>
+<br>
+<% $num += 1%>
+<% end %>
