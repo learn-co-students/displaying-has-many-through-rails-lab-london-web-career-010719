@@ -1,0 +1,8 @@
+<h3>New Doctor</h3>
+
+<%= form_for(@doctor) do |f| %>
+  <label> Name:</label><br>
+  <%= f.text_field :name%><br>
+
+  <%= f.submit %>
+<% end %>

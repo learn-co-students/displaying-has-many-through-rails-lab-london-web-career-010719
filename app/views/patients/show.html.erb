@@ -1,0 +1,9 @@
+<h3><%=@patient.name %></h3>
+<% @patient.appointments.all.map do |appointment| %>
+<%= appointment.name%>
+<%= appointment.doctor.name%>
+<br>
+<br>
+<% end %>
+
+<h3><a href="/appointments">Go To All Appointments</a></h3>
